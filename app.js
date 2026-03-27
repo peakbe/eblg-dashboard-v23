@@ -435,16 +435,8 @@ async function refresh() {
     document.getElementById("meteo-summary").textContent = "METAR indisponible";
   }
 
-  /* FIDS */
+ /* FIDS */
 const fids = await fetchFIDS();
-
-// Limiter à 10 prochains vols
-function limitNextFlights(list) {
-  return list
-    .filter(f => f.scheduled)
-    .sort((a, b) => new Date(a.scheduled) - new Date(b.scheduled))
-    .slice(0, 10);
-}
 
 fids.arrivals = limitNextFlights(fids.arrivals);
 fids.departures = limitNextFlights(fids.departures);
