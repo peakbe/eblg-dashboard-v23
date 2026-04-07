@@ -5,9 +5,9 @@
 export const PROXY = "https://eblg-proxy.onrender.com";
 
 export const ENDPOINTS = {
-    metar: `${PROXY}/metar`,
-    taf: `${PROXY}/taf`,
-    fids: `${PROXY}/fids`
+    metar: "https://ton-service.onrender.com/metar",
+    taf: "https://ton-service.onrender.com/taf",
+    fids: "https://ton-service.onrender.com/fids"
 };
 
 export const SONOS = [
